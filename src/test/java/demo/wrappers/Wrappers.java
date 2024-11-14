@@ -3,10 +3,9 @@ package demo.wrappers;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.List;
 
-import org.openqa.selenium.Alert;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -43,8 +42,9 @@ public class Wrappers  {
 
       private  static void clickaction(ChromeDriver driver,WebElement element)
       {
-        JavascriptExecutor js= (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();",element);
+        element.click();
+        // JavascriptExecutor js= (JavascriptExecutor) driver;
+        // js.executeScript("arguments[0].click();",element);
       }
 
 

@@ -62,7 +62,8 @@ public class TestCases {
     }
 
     @Test
-    public void testCase01() {
+    public void testCase01() throws InterruptedException {
+  
         Wrappers wrap=new Wrappers(driver) ;
         //Open the website
         wrap.openUrl("https://docs.google.com/forms/d/e/1FAIpQLSep9LTMntH5YqIXa5nkiPKSs283kdwitBBhXWyZdAS-e4CxBQ/viewform");
@@ -74,10 +75,12 @@ public class TestCases {
         wrap.practicingAutomationQuestion("I want to be the best QA Engineer!");
         //3rd Question ---How much experience do you have in Automation Testing?
         wrap.ExpirenceinAutomationQuestion("0 - 2");
+        Thread.sleep(2000);
         //4th Question -----Which of the following have you learned in Crio.Do for Automation Testing?
         wrap.ToolsLearnedQuestion("Java", "Selenium", "TestNG");
         //5th Question ----How should you be addressed?
           wrap.SalutationQuestion();
+          Thread.sleep(2000);
         //6th Question ----What was the date 7 days ago?
         wrap.PreviousDateQuestion();
         //7th Question ----What is the time right now?
